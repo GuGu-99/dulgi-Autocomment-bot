@@ -2,6 +2,12 @@
 # comment_embed_bot_v1_2.py
 # Render 무료버전 안전형 댓글요약봇 — 다중 채널 + 7일 유지 제한
 
+# === Fix for missing audioop in Render Python 3.13 ===
+import sys, types
+if 'audioop' not in sys.modules:
+    sys.modules['audioop'] = types.ModuleType('audioop')
+
+
 import os
 import json
 import asyncio
