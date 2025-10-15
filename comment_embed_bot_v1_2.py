@@ -46,6 +46,11 @@ def run_flask():
     app.run(host="0.0.0.0", port=8080)
 Thread(target=run_flask).start()
 
+import time
+time.sleep(3)
+
+bot.run(TOKEN)
+
 # ===== 데이터 로드 & 저장 =====
 def load_data():
     global data
